@@ -1,0 +1,41 @@
+<meta charset = "UTF-8">
+
+<script>
+
+//Sabe-se que, no Brasil, o alistamento militar é obrigatório para homens maiores de
+//idade e brasileiros natos, caso o país esteja em paz, e para qualquer brasileiro nato e
+//maior de idade, caso o país esteja em guerra. Escreva um programa que leia o sexo, a
+//idade, a nacionalidade de um indivíduo e o estado em que se encontra a nação (guerra ou paz) 
+//e mostre 1, se o indivíduo for obrigado a se alistar, ou 0, caso contrário. 
+
+var sexo, idade, nac, est;
+
+sexo = prompt("Informe o sexo: (ex.: masculino ou feminino)");
+idade = parseInt(prompt("Informe a idade:"));
+nac = prompt("Informe a nacionalidade: (ex.: basileira ou estrangeira)");
+est = prompt("Informe o estado que se encontra a nação: (ex.: guerra ou paz)");
+
+if (est == "paz")
+{
+   if (sexo == "masculino" && idade >= 18 && nac == "brasileira")
+      {
+        document.write("1 - Você é obrigado a se alistar. <br>");
+      }
+   else
+      {
+        document.write("0 - Você não é obrigado a se alistar. <br>");
+      } 
+}
+else
+{
+   if (idade < 18 || nac != "brasileira")
+      {
+        document.write("0 - Você não é obrigado a se alistar. <br>");
+      }
+   else
+      {
+        document.write("1 - Você é obrigado a se alistar. <br>");
+      }
+}
+
+</script>

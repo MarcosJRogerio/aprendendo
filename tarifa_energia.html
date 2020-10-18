@@ -1,0 +1,42 @@
+<meta charset = "UTF-8">
+
+<script>
+
+//Suponha que o valor a pagar em uma conta de energia mensal seja função da
+//quantidade de KWh consumidos e que, conforme mostra a tabela abaixo, a tarifa paga
+//por KWh possui diferentes valores para cada classe consumidora. 
+//Classe Consumidora     Tarifa por KWh
+//       1                   1 real
+//       2                 80 centavos
+//       3                 50 centavos 
+//Sabendo que sobre o valor a pagar pela energia consumida incide um imposto de 30%, faça um programa que:
+//a) Solicite que o usuário digite seu consumo de energia em KWh e armazena-o em UMA variável adequada;
+//b) Solicite que o usuário digite a classe consumidora à qual pertence (1,2 ou 3) e armazena-a em UMA variável adequada;
+//c) Atribua o valor correto da tarifa de acordo com a tabela acima;
+//d) Calcule o valor total a pagar levando em conta o consumo total, o valor da tarifa e o
+//acréscimo de 30% sobre o valor a pagar pela energia consumida e imprima na tela corretamente o valor total a pagar.
+
+var consumo, classe, valortotal;
+
+consumo = parseInt(prompt("Informe o consumo de energia em KWh:"));
+classe = parseInt(prompt("Informe a classe consumidora (1, 2 ou 3):"));
+
+if (classe == 1)
+{
+valortotal = (consumo * 1) + (consumo * 1) * 0.3;
+document.write("O valor total a pagar é: R$ " + valortotal.toFixed(2) + "<br>");
+}
+else
+{
+   if (classe == 2)
+   {
+     valortotal = (consumo * 0.8) + (consumo * 0.8) * 0.3;
+     document.write("O valor total a pagar é: R$ " + valortotal.toFixed(2) + "<br>");
+   }
+   else
+   {
+     valortotal = (consumo * 0.5) + (consumo * 0.5) * 0.3;
+     document.write("O valor total a pagar é: R$ " + valortotal.toFixed(2) + "<br>"); 
+   }
+}
+</script>

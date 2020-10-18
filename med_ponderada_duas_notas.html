@@ -1,0 +1,17 @@
+<meta charset = "UTF-8">
+
+<script>
+
+//Faça um programa que leia duas notas, calcule e mostre a média ponderada dessas
+//notas, considerando peso 2 para a primeira e peso 3 para a segunda.  
+
+var n1, n2, medpond;
+
+n1 = parseFloat(prompt("Infome a primeira nota(peso2):"));
+n2 = parseFloat(prompt("Infome a segunda nota(peso 3):"));
+
+medpond = ((n1*2) + (n2*3)) / 5;
+
+document.write("A média ponderada é: " + medpond.toFixed(1) + "<br>");
+
+</script>
