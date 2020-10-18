@@ -1,0 +1,26 @@
+<meta charset = "UTF-8">
+
+<script>
+
+var vpremio, pontos1, pontos2, pontos3, premio1, premio2, premio3;
+
+// entrada de dados
+
+vpremio = parseFloat(prompt("Informe o valor do prêmio:"));
+pontos1 = parseInt(prompt("Informe os pontos do primeiro colocado:"));
+pontos2 = parseInt(prompt("Informe os pontos do segundo colocado:"));
+pontos3 = parseInt(prompt("Informe os pontos do terceiro colocado:"));
+
+//processamento de dados
+
+premio1 = pontos1 * vpremio / (pontos1 + pontos2 + pontos3);
+premio2 = pontos2 * vpremio / (pontos1 + pontos2 + pontos3);
+premio3 = pontos3 * vpremio / (pontos1 + pontos2 + pontos3);
+
+//saída de dados
+
+document.write("O valor do prêmio do primeiro colocado será R$ " + premio1.toFixed(2) + "<br>");
+document.write("O valor do prêmio do segundo colocado será R$ " + premio2.toFixed(2) + "<br>");
+document.write("O valor do prêmio do terceiro colocado será R$ " + premio3.toFixed(2) + "<br>");
+
+</script>
